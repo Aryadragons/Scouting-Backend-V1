@@ -48,11 +48,13 @@ public class Main extends Application {
 	private MenuItem exportScDataMI;
 	private MenuItem exportDriveTeamDataMI;
 	private MenuItem exportDriveTeamComsMI;
+	//Home page Menu Item
+	private MenuItem homePageMI;
 	@Override
 	public void start(Stage primaryStage) {
 		try {
 			BorderPane root = new BorderPane();
-			Scene scene = new Scene(root,400,400);
+			Scene scene = new Scene(root,800,800);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			//adding menu bar
 			MenuBar MB = createMenuBar();
@@ -68,6 +70,7 @@ public class Main extends Application {
 		// Creating the Menu Bar
 		MenuBar mB = new MenuBar();
 		// Creating the Menus
+		Menu homePageMenu = new Menu("Home");
 		Menu searchMenu = new Menu("Search:");
 		Menu compareMenu = new Menu("Compare:");
 		Menu findBestMenu = new Menu("Find The Best:");
@@ -76,6 +79,7 @@ public class Main extends Application {
 		Menu editMenu = new Menu("Edit Data");
 		Menu exportMenu = new Menu("Export Data");
 		// Creating the Menu Items
+		homePageMI = new MenuItem("Home");
 		searchTeams = new MenuItem("Teams");
 		searchAllince = new MenuItem("Allinces");
 		searchAutos = new MenuItem("Autos");
@@ -104,13 +108,16 @@ public class Main extends Application {
 		exportDriveTeamDataMI = new MenuItem("Drive Team Data");
 		exportDriveTeamComsMI = new MenuItem("Drive Team Comments");
 		//Adding Menu Items to their Menus
+		homePageMenu.getItems().addAll(homePageMI);
 		searchMenu.getItems().addAll(searchTeams, searchAutos, searchAllince);
 		compareMenu.getItems().addAll(compareTeams, compareAllince, compareAutos);
+		findBestMenu.getItems().addAll(findBestTeam, findBestAllince, findBestAuto, findBestStat, findBestRobotArchatype);
+		createMenu.getItems().addAll(createAllince, createMatch, createAutoplan, createMacthPlan);
 		openMenu.getItems().addAll(openNewScDataMI, openNewPitDataMI, openNewDriveTeamDataMI, openNewDriveTeamComsMI);
 		editMenu.getItems().addAll(editScDataMI, editPitDataMI, editDriveTeamDataMI, editDriveTeamComsMI);
 		exportMenu.getItems().addAll(exportScDataMI, exportPitDataMI, exportDriveTeamDataMI, exportDriveTeamComsMI);
 		//Adding Menu Items to the Menu Bar
-		mB.getMenus().addAll(searchMenu, compareMenu, openMenu, editMenu, exportMenu);
+		mB.getMenus().addAll(homePageMenu, searchMenu, compareMenu, findBestMenu, createMenu, openMenu, editMenu, exportMenu);
 		return mB;
 	}
 	
