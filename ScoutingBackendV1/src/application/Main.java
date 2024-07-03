@@ -81,7 +81,9 @@ public class Main extends Application {
 			Tab findTeamTab = new Tab("Find Best Team", findTeam);
 			findBestAllinceTab findAllince = new findBestAllinceTab();
 			Tab findAllinceTab = new Tab("Find Best Allince", findAllince);
-			mainTP.getTabs().addAll(seTeamsTab, seAllincesTab, seAutosTab, comTeamsTab, comAllincesTab, comAutosTab, findTeamTab, findAllinceTab);
+			findBestAutoTab findAuto = new findBestAutoTab();
+			Tab findAutoTab = new Tab("Find Best auto", findAuto);
+			mainTP.getTabs().addAll(seTeamsTab, seAllincesTab, seAutosTab, comTeamsTab, comAllincesTab, comAutosTab, findTeamTab, findAllinceTab, findAutoTab);
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {
