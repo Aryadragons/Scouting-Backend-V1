@@ -54,7 +54,7 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			BorderPane root = new BorderPane();
-			Scene scene = new Scene(root,800,800);
+			Scene scene = new Scene(root,1400,800);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			//adding menu bar
 			MenuBar MB = createMenuBar();
@@ -72,7 +72,11 @@ public class Main extends Application {
 			//adding compare tabs
 			compareTeamsTab comTeams = new compareTeamsTab();
 			Tab comTeamsTab = new Tab("Compare Teams", comTeams);
-			mainTP.getTabs().addAll(seTeamsTab, seAllincesTab, seAutosTab, comTeamsTab);
+			compareAllincesTab comAllinces = new compareAllincesTab();
+			Tab comAllincesTab = new Tab("Compare Allinces", comAllinces);
+			compareAutosTab comAutos = new compareAutosTab();
+			Tab comAutosTab = new Tab("Compare Autos", comAutos);
+			mainTP.getTabs().addAll(seTeamsTab, seAllincesTab, seAutosTab, comTeamsTab, comAllincesTab, comAutosTab);
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {
