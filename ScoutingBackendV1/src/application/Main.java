@@ -246,7 +246,9 @@ public class Main extends Application implements EventHandler<ActionEvent>{
 	}
 	
 	private void makeCreateMatchPlan() {
-		
+		createMatchPlanTab creMatchPlan = new createMatchPlanTab();
+		Tab creMatchPlanTab = new Tab("Create Match Plan", creMatchPlan);
+		mainTP.getTabs().addAll(creMatchPlanTab);
 	}
 	
 	private void makeOpenNewScDataMI() {
