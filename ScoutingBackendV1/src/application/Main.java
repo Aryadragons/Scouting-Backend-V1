@@ -62,13 +62,17 @@ public class Main extends Application {
 			//adding the Tab panes
 			TabPane mainTP = new TabPane();
 			root.setBottom(mainTP);
+			//adding search tabs
 			searchTeamsTab seTeams = new searchTeamsTab();
 			Tab seTeamsTab = new Tab("Search Teams", seTeams);
 			searchAllincesTab seAllinces = new searchAllincesTab();
 			Tab seAllincesTab = new Tab("Search Allinces", seAllinces);
 			searchAutosTab seAutos = new searchAutosTab();
 			Tab seAutosTab = new Tab("Search Autos", seAutos);
-			mainTP.getTabs().addAll(seTeamsTab, seAllincesTab, seAutosTab);
+			//adding compare tabs
+			compareTeamsTab comTeams = new compareTeamsTab();
+			Tab comTeamsTab = new Tab("Compare Teams", comTeams);
+			mainTP.getTabs().addAll(seTeamsTab, seAllincesTab, seAutosTab, comTeamsTab);
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {
