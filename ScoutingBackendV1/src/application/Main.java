@@ -66,7 +66,9 @@ public class Main extends Application {
 			Tab seTeamsTab = new Tab("Search Teams", seTeams);
 			searchAllincesTab seAllinces = new searchAllincesTab();
 			Tab seAllincesTab = new Tab("Search Allinces", seAllinces);
-			mainTP.getTabs().addAll(seTeamsTab, seAllincesTab);
+			searchAutosTab seAutos = new searchAutosTab();
+			Tab seAutosTab = new Tab("Search Autos", seAutos);
+			mainTP.getTabs().addAll(seTeamsTab, seAllincesTab, seAutosTab);
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {
