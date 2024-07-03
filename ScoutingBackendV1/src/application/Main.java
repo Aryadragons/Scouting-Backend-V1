@@ -59,6 +59,12 @@ public class Main extends Application {
 			//adding menu bar
 			MenuBar MB = createMenuBar();
 			root.setTop(MB);
+			//adding the Tab panes
+			TabPane mainTP = new TabPane();
+			root.setBottom(mainTP);
+			searchTeamsTab seTeams = new searchTeamsTab();
+			Tab seTeamsTab = new Tab("Search Teams", seTeams);
+			mainTP.getTabs().addAll(seTeamsTab);
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {
