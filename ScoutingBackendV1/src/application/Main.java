@@ -87,7 +87,14 @@ public class Main extends Application {
 			Tab findStatTab = new Tab("Find Best Stat", findStat);
 			findBestRobotArchatype findArchatype = new findBestRobotArchatype();
 			Tab findArchatypeTab = new Tab("Find Best Robot Archatype", findArchatype);
-			mainTP.getTabs().addAll(seTeamsTab, seAllincesTab, seAutosTab, comTeamsTab, comAllincesTab, comAutosTab, findTeamTab, findAllinceTab, findAutoTab, findStatTab, findArchatypeTab);
+			//adding create Tabs
+			createAllinceTab creAllince = new createAllinceTab();
+			Tab creAllinceTab = new Tab("Create Allince", creAllince);
+			createMatchTab creMatch = new createMatchTab();
+			Tab creMatchTab = new Tab("Create Match", creMatch);
+			createAutoPlanTab creAutoPlan = new createAutoPlanTab();
+			Tab creAutoPlanTab = new Tab("Create Auto Plan", creAutoPlan);
+			mainTP.getTabs().addAll(seTeamsTab, seAllincesTab, seAutosTab, comTeamsTab, comAllincesTab, comAutosTab, findTeamTab, findAllinceTab, findAutoTab, findStatTab, findArchatypeTab, creAllinceTab, creMatchTab, creAutoPlanTab);
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {
