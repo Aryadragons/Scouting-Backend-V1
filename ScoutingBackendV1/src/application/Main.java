@@ -64,7 +64,9 @@ public class Main extends Application {
 			root.setBottom(mainTP);
 			searchTeamsTab seTeams = new searchTeamsTab();
 			Tab seTeamsTab = new Tab("Search Teams", seTeams);
-			mainTP.getTabs().addAll(seTeamsTab);
+			searchAllincesTab seAllinces = new searchAllincesTab();
+			Tab seAllincesTab = new Tab("Search Allinces", seAllinces);
+			mainTP.getTabs().addAll(seTeamsTab, seAllincesTab);
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {
