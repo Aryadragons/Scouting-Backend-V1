@@ -5,14 +5,14 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 
-public class createAllinceTab extends GridPane{
+public class createAllianceTab extends GridPane{
 	
 	private ComboBox<String> team1CB;
 	private ComboBox<String> team2CB;
 	private ComboBox<String> team3CB;
 	private Button submitB;
 	
-	public createAllinceTab() {
+	public createAllianceTab() {
 		this.add(new Label("Select First Team   "), 0, 0);
 		this.add(new Label("Select Second Team   "), 1, 0);
 		this.add(new Label("Select Third Team   "), 2, 0);

@@ -19,28 +19,28 @@ import javafx.scene.control.TextArea;
 public class Main extends Application implements EventHandler<ActionEvent>{
 	
 	// Looking Up Data Menu Items
-	private MenuItem searchTeams;
-	private MenuItem searchAllince;
-	private MenuItem searchAutos;
-	private MenuItem searchMatch;
-	private MenuItem compareTeams;
-	private MenuItem compareAllince;
-	private MenuItem compareAutos;
-	private MenuItem compareMatch;
-	private MenuItem findBestTeam;
-	private MenuItem findBestAllince;
-	private MenuItem findBestAuto;
-	private MenuItem findBestStat;
-	private MenuItem findBestRobotArchatype;
+	private MenuItem searchTeamsMI;
+	private MenuItem searchAllianceMI;
+	private MenuItem searchAutosMI;
+	private MenuItem searchMatchMI;
+	private MenuItem compareTeamsMI;
+	private MenuItem compareAllianceMI;
+	private MenuItem compareAutosMI;
+	private MenuItem compareMatchMI;
+	private MenuItem findBestTeamMI;
+	private MenuItem findBestAllianceMI;
+	private MenuItem findBestAutoMI;
+	private MenuItem findBestStatMI;
+	private MenuItem findBestRobotArchetypeMI;
 	// Using Data Menu Items
-	private MenuItem createAllince;
-	private MenuItem createMatch;
-	private MenuItem createAutoplan;
-	private MenuItem createMacthPlan;
+	private MenuItem createAllianceMI;
+	private MenuItem createMatchMI;
+	private MenuItem createAutoplanMI;
+	private MenuItem createMacthPlanMI;
 	//Data Menu Items
-	private MenuItem setPlayOffAlliances;
-	private MenuItem editPlayOffAlliances;
-	private MenuItem deletePlayOffAlliances;
+	private MenuItem setPlayOffAlliancesMI;
+	private MenuItem editPlayOffAlliancesMI;
+	private MenuItem deletePlayOffAlliancesMI;
 	private MenuItem openNewScDataMI;
 	private MenuItem openNewPitDataMI;
 	private MenuItem openNewDriveTeamDataMI;
@@ -93,49 +93,50 @@ public class Main extends Application implements EventHandler<ActionEvent>{
 		homePageMI = new MenuItem("Home");
 		homePageMI.setOnAction(this);
 		//search stuff
-		searchTeams = new MenuItem("Teams");
-		searchTeams.setOnAction(this);
-		searchAllince = new MenuItem("Allinces");
-		searchAllince.setOnAction(this);
-		searchAutos = new MenuItem("Autos");
-		searchAutos.setOnAction(this);
-		searchMatch = new MenuItem("Match");
-		searchMatch.setOnAction(this);
+		searchTeamsMI = new MenuItem("Teams");
+		searchTeamsMI.setOnAction(this);
+		searchAllianceMI = new MenuItem("Alliances");
+		searchAllianceMI.setOnAction(this);
+		searchAutosMI = new MenuItem("Autos");
+		searchAutosMI.setOnAction(this);
+		searchMatchMI = new MenuItem("Match");
+		searchMatchMI.setOnAction(this);
 		//compare stuff
-		compareTeams = new MenuItem("Teams");
-		compareTeams.setOnAction(this);
-		compareAllince = new MenuItem("Allinces");
-		compareAllince.setOnAction(this);
-		compareAutos = new MenuItem("Autos");
-		compareAutos.setOnAction(this);
-		compareMatch = new MenuItem("Match");
+		compareTeamsMI = new MenuItem("Teams");
+		compareTeamsMI.setOnAction(this);
+		compareAllianceMI = new MenuItem("Alliances");
+		compareAllianceMI.setOnAction(this);
+		compareAutosMI = new MenuItem("Autos");
+		compareAutosMI.setOnAction(this);
+		compareMatchMI = new MenuItem("Match");
+		compareMatchMI.setOnAction(this);
 		//find best stuff
-		findBestTeam = new MenuItem("Team");
-		findBestTeam.setOnAction(this);
-		findBestAllince = new MenuItem("Allince");
-		findBestAllince.setOnAction(this);
-		findBestAuto = new MenuItem("Auto");
-		findBestAuto.setOnAction(this);
-		findBestStat = new MenuItem("Stat");
-		findBestStat.setOnAction(this);
-		findBestRobotArchatype = new MenuItem("Robot Archatype");
-		findBestRobotArchatype.setOnAction(this);
+		findBestTeamMI = new MenuItem("Team");
+		findBestTeamMI.setOnAction(this);
+		findBestAllianceMI = new MenuItem("Alliance");
+		findBestAllianceMI.setOnAction(this);
+		findBestAutoMI = new MenuItem("Auto");
+		findBestAutoMI.setOnAction(this);
+		findBestStatMI = new MenuItem("Stat");
+		findBestStatMI.setOnAction(this);
+		findBestRobotArchetypeMI = new MenuItem("Robot Archetype");
+		findBestRobotArchetypeMI.setOnAction(this);
 		//create stuff
-		createAllince = new MenuItem("Allince");
-		createAllince.setOnAction(this);
-		createMatch = new MenuItem("Match");
-		createAllince.setOnAction(this);
-		createAutoplan = new MenuItem("Auto Plan");
-		createAutoplan.setOnAction(this);
-		createMacthPlan = new MenuItem("Macth Plan");
-		createMacthPlan.setOnAction(this);
+		createAllianceMI = new MenuItem("Alliance");
+		createAllianceMI.setOnAction(this);
+		createMatchMI = new MenuItem("Match");
+		createMatchMI.setOnAction(this);
+		createAutoplanMI = new MenuItem("Auto Plan");
+		createAutoplanMI.setOnAction(this);
+		createMacthPlanMI = new MenuItem("Macth Plan");
+		createMacthPlanMI.setOnAction(this);
 		// Playoff Alliances
-		setPlayOffAlliances = new MenuItem("Set");
-		setPlayOffAlliances.setOnAction(this);
-		editPlayOffAlliances = new MenuItem("Edit");
-		editPlayOffAlliances.setOnAction(this);
-		deletePlayOffAlliances = new MenuItem("Delete");
-		deletePlayOffAlliances.setOnAction(this);
+		setPlayOffAlliancesMI= new MenuItem("Set");
+		setPlayOffAlliancesMI.setOnAction(this);
+		editPlayOffAlliancesMI = new MenuItem("Edit");
+		editPlayOffAlliancesMI.setOnAction(this);
+		deletePlayOffAlliancesMI = new MenuItem("Delete");
+		deletePlayOffAlliancesMI.setOnAction(this);
 		//open stuff
 		openNewScDataMI = new MenuItem("Scouting Data");
 		openNewScDataMI.setOnAction(this);
@@ -165,11 +166,11 @@ public class Main extends Application implements EventHandler<ActionEvent>{
 		exportDriveTeamComsMI.setOnAction(this);
 		//Adding Menu Items to their Menus
 		homePageMenu.getItems().addAll(homePageMI);
-		searchMenu.getItems().addAll(searchTeams, searchAutos, searchAllince, searchMatch);
-		compareMenu.getItems().addAll(compareTeams, compareAllince, compareAutos, compareMatch);
-		findBestMenu.getItems().addAll(findBestTeam, findBestAllince, findBestAuto, findBestStat, findBestRobotArchatype);
-		createMenu.getItems().addAll(createAllince, createMatch, createAutoplan, createMacthPlan);
-		playOffMenu.getItems().addAll(setPlayOffAlliances, editPlayOffAlliances, deletePlayOffAlliances);
+		searchMenu.getItems().addAll(searchTeamsMI, searchAutosMI, searchAllianceMI, searchMatchMI);
+		compareMenu.getItems().addAll(compareTeamsMI, compareAllianceMI, compareAutosMI, compareMatchMI);
+		findBestMenu.getItems().addAll(findBestTeamMI, findBestAllianceMI, findBestAutoMI, findBestStatMI, findBestRobotArchetypeMI);
+		createMenu.getItems().addAll(createAllianceMI, createMatchMI, createAutoplanMI, createMacthPlanMI);
+		playOffMenu.getItems().addAll(setPlayOffAlliancesMI, editPlayOffAlliancesMI, deletePlayOffAlliancesMI);
 		openMenu.getItems().addAll(openNewScDataMI, openNewPitDataMI, openNewDriveTeamDataMI, openNewDriveTeamComsMI);
 		editMenu.getItems().addAll(editScDataMI, editPitDataMI, editDriveTeamDataMI, editDriveTeamComsMI);
 		exportMenu.getItems().addAll(exportScDataMI, exportPitDataMI, exportDriveTeamDataMI, exportDriveTeamComsMI);
@@ -186,7 +187,7 @@ public class Main extends Application implements EventHandler<ActionEvent>{
 	
 	private void makeSearchAllinces() {
 		searchAllincesTab seAllinces = new searchAllincesTab();
-		Tab seAllincesTab = new Tab("Search Allinces", seAllinces);
+		Tab seAllincesTab = new Tab("Search Alliances", seAllinces);
 		mainTP.getTabs().addAll(seAllincesTab);
 	}
 	
@@ -196,6 +197,12 @@ public class Main extends Application implements EventHandler<ActionEvent>{
 		mainTP.getTabs().addAll(seAutosTab);
 	}
 	
+	private void makeSearchMatch() {
+		searchMatchTab seMatch = new searchMatchTab();
+		Tab seMatchTab = new Tab("Search Match", seMatch);
+		mainTP.getTabs().addAll(seMatchTab);
+	}
+	
 	private void makeCompareTeams() {
 		compareTeamsTab comTeams = new compareTeamsTab();
 		Tab comTeamsTab = new Tab("Compare Teams", comTeams);
@@ -203,15 +210,21 @@ public class Main extends Application implements EventHandler<ActionEvent>{
 	}
 	
 	private void makeCompareAllinces() {
-		compareAllincesTab comAllinces = new compareAllincesTab();
-		Tab comAllincesTab = new Tab("Compare Allinces", comAllinces);
-		mainTP.getTabs().addAll(comAllincesTab);
+		compareAlliancesTab comAlliances = new compareAlliancesTab();
+		Tab comAlliancesTab = new Tab("Compare Alliances", comAlliances);
+		mainTP.getTabs().addAll(comAlliancesTab);
 	}
 	
 	private void makeCompareAutos() {
 		compareAutosTab comAutos = new compareAutosTab();
 		Tab comAutosTab = new Tab("Compare Autos", comAutos);
 		mainTP.getTabs().addAll(comAutosTab);
+	}
+	
+	private void makeCompareMatches() {
+		compareMatchesTab comMatches = new compareMatchesTab();
+		Tab comMatchesTab = new Tab("Compare Matches", comMatches);
+		mainTP.getTabs().addAll(comMatchesTab);
 	}
 	
 	private void makeFindBestTeam() {
@@ -221,9 +234,9 @@ public class Main extends Application implements EventHandler<ActionEvent>{
 	}
 	
 	private void makeFindBestAllince() {
-		findBestAllinceTab findAllince = new findBestAllinceTab();
-		Tab findAllinceTab = new Tab("Find Best Allince", findAllince);
-		mainTP.getTabs().addAll(findAllinceTab);
+		findBestAllianceTab findAlliance = new findBestAllianceTab();
+		Tab findAllianceTab = new Tab("Find Best Alliance", findAlliance);
+		mainTP.getTabs().addAll(findAllianceTab);
 	}
 	
 	private void makeFindBestAuto() {
@@ -239,15 +252,15 @@ public class Main extends Application implements EventHandler<ActionEvent>{
 	}
 	
 	private void makeFindBestRobotArchatype() {
-		findBestRobotArchatype findArchatype = new findBestRobotArchatype();
-		Tab findArchatypeTab = new Tab("Find Best Robot Archatype", findArchatype);
-		mainTP.getTabs().addAll(findArchatypeTab);
+		findBestRobotArchetype findArchetype = new findBestRobotArchetype();
+		Tab findArchetypeTab = new Tab("Find Best Robot Archetype", findArchetype);
+		mainTP.getTabs().addAll(findArchetypeTab);
 	}
 	
 	private void makeCreateAllince() {
-		createAllinceTab creAllince = new createAllinceTab();
-		Tab creAllinceTab = new Tab("Create Allince", creAllince);
-		mainTP.getTabs().addAll(creAllinceTab);
+		createAllianceTab creAlliance = new createAllianceTab();
+		Tab creAllianceTab = new Tab("Create Alliance", creAlliance);
+		mainTP.getTabs().addAll(creAllianceTab);
 	}
 	
 	private void makeCreateMatch() {
@@ -266,6 +279,24 @@ public class Main extends Application implements EventHandler<ActionEvent>{
 		createMatchPlanTab creMatchPlan = new createMatchPlanTab();
 		Tab creMatchPlanTab = new Tab("Create Match Plan", creMatchPlan);
 		mainTP.getTabs().addAll(creMatchPlanTab);
+	}
+	
+	private void makeSetPlayOffAlliance() {
+		setPlayOffAlliancesTab setPlayOff = new setPlayOffAlliancesTab();
+		Tab setPlayOffTab = new Tab("Set Play Off Alliances", setPlayOff);
+		mainTP.getTabs().addAll(setPlayOffTab);
+	}
+	
+	private void makeEditPlayOffAlliance() {
+		editPlayOffAlliancesTab editPlayOff = new editPlayOffAlliancesTab();
+		Tab editPlayOffTab = new Tab("Edit Play Off Alliances", editPlayOff);
+		mainTP.getTabs().addAll(editPlayOffTab);
+	}
+	
+	private void makeDeletePlayOffAlliance() {
+		deletePlayOffAlliancesTab deletePlayOff = new deletePlayOffAlliancesTab();
+		Tab deletePlayOffTab = new Tab("Delete Play Off Alliances", deletePlayOff);
+		mainTP.getTabs().addAll(deletePlayOffTab);
 	}
 	
 	private void makeOpenNewScData() {
@@ -290,18 +321,6 @@ public class Main extends Application implements EventHandler<ActionEvent>{
 		openNewDriveTeamComsTab openDriveTeamComs = new openNewDriveTeamComsTab();
 		Tab openDriveTeamComsTab = new Tab("Open New DriveTeam Comments", openDriveTeamComs);
 		mainTP.getTabs().addAll(openDriveTeamComsTab);
-	}
-	
-	
-	private void makeSetPlayOffAlliance() {
-		setPlayOffAlliancesTab setPlayOff = new setPlayOffAlliancesTab();
-		Tab setPlayOffTab = new Tab("Set Play Off Alliances", setPlayOff);
-		mainTP.getTabs().addAll(setPlayOffTab);
-	}
-	private void makeEditPlayOffAlliance() {
-		editPlayOffAlliancesTab editPlayOff = new editPlayOffAlliancesTab();
-		Tab editPlayOffTab = new Tab("Edit Play Off Alliances", editPlayOff);
-		mainTP.getTabs().addAll(editPlayOffTab);
 	}
 	
 	private void makeEditScData() {
@@ -362,56 +381,65 @@ public class Main extends Application implements EventHandler<ActionEvent>{
 	@Override
 	public void handle(ActionEvent event) {
 		try {
-			if(event.getSource() == searchTeams) {
+			if(event.getSource() == searchTeamsMI) {
 				makeSearchTeams();
 			}
-			if(event.getSource() == searchAllince) {
+			if(event.getSource() == searchAllianceMI) {
 				makeSearchAllinces();
 			}
-			if(event.getSource() == searchAutos) {
+			if(event.getSource() == searchAutosMI) {
 				makeSearchAutos();
 			}
-			if(event.getSource() == compareTeams) {
+			if(event.getSource() == searchMatchMI) {
+				makeSearchMatch();
+			}
+			if(event.getSource() == compareTeamsMI) {
 				makeCompareTeams();
 			}
-			if(event.getSource() == compareAllince) {
+			if(event.getSource() == compareAllianceMI) {
 				makeCompareAllinces();
 			}
-			if(event.getSource() == compareAutos) {
+			if(event.getSource() == compareAutosMI) {
 				makeCompareAutos();
 			}
-			if(event.getSource() == findBestTeam) {
+			if(event.getSource() == compareMatchMI) {
+				makeCompareMatches();
+			}
+			if(event.getSource() == findBestTeamMI) {
 				makeFindBestTeam();
 			}
-			if(event.getSource() == findBestAllince) {
+			if(event.getSource() == findBestAllianceMI) {
 				makeFindBestAllince();
 			}
-			if(event.getSource() == findBestAuto) {
+			if(event.getSource() == findBestAutoMI) {
 				makeFindBestAuto();
 			}
-			if(event.getSource() == findBestStat) {
+			if(event.getSource() == findBestStatMI) {
 				makeFindBestStat();
 			}
-			if(event.getSource() == findBestRobotArchatype) {
+			if(event.getSource() == findBestRobotArchetypeMI) {
 				makeFindBestRobotArchatype();
 			}
-			if(event.getSource() == createAllince) {
+			if(event.getSource() == createAllianceMI) {
 				makeCreateAllince();
 			}
-			if(event.getSource() == createMatch) {
+			if(event.getSource() == createMatchMI) {
 				makeCreateMatch();
 			}
-			if(event.getSource() == createAutoplan) {
+			if(event.getSource() == createAutoplanMI) {
 				makeCreateAutoPlan();
 			}
-			if(event.getSource() == createMacthPlan) {
+			if(event.getSource() == createMacthPlanMI) {
 				makeCreateMatchPlan();
 			}
-			if(event.getSource() == setPlayOffAlliances) {
+			if(event.getSource() == setPlayOffAlliancesMI) {
 				makeSetPlayOffAlliance();
 			}
-			if(event.getSource() == editPlayOffAlliances) {
+			if(event.getSource() == editPlayOffAlliancesMI) {
 				makeEditPlayOffAlliance();
+			}
+			if(event.getSource() == deletePlayOffAlliancesMI) {
+				makeDeletePlayOffAlliance();
 			}
 			if(event.getSource() == openNewScDataMI) {
 				makeOpenNewScData();

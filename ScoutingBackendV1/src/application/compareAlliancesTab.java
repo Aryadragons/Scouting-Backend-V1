@@ -5,7 +5,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 
-public class compareAllincesTab extends GridPane{
+public class compareAlliancesTab extends GridPane{
 	
 	private ComboBox<String> allince1CB;
 	private ComboBox<String> allince2CB;
@@ -15,7 +15,7 @@ public class compareAllincesTab extends GridPane{
 	private ComboBox<String> allince6CB;
 	private Button submitB;
 	
-	public compareAllincesTab() {
+	public compareAlliancesTab() {
 		this.add(new Label("Select the 1st team on Allince 1"), 0, 0);
 		this.add(new Label("Select the 2nd team on Allince 1"), 1, 0);
 		this.add(new Label("Select the 3rd team on Allince 1"), 2, 0);

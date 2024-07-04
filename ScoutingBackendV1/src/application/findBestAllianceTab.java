@@ -6,7 +6,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 
-public class findBestAllinceTab extends GridPane {
+public class findBestAllianceTab extends GridPane {
 	
 	private ComboBox<String> firstMetCB;
 	private ComboBox<String> secondMetCB;
@@ -23,7 +23,7 @@ public class findBestAllinceTab extends GridPane {
 	private TextField seventhAllinceTF;
 	private TextField eighthAllinceTF;
 	
-	public findBestAllinceTab() {
+	public findBestAllianceTab() {
 		this.add(new Label("First Meterict to Sort on"), 0, 0);
 		this.add(new Label("Second Meterict to Sort on"), 1, 0);
 		this.add(new Label("Third Meterict to Sort on"), 2, 0);
