@@ -324,6 +324,12 @@ public class Main extends Application implements EventHandler<ActionEvent>{
 		mainTP.getTabs().addAll(exDriveTeamComsTab);
 	}
 	
+	private void makeHomePage() {
+		homePageTab home = new homePageTab();
+		Tab homeTab = new Tab("Home Page", home);
+		mainTP.getTabs().addAll(homeTab);
+	}
+	
 	@Override
 	public void handle(ActionEvent event) {
 		try {
@@ -407,6 +413,9 @@ public class Main extends Application implements EventHandler<ActionEvent>{
 			}
 			if(event.getSource() == exportDriveTeamComsMI) {
 				makeExportDriveTeamComs();
+			}
+			if(event.getSource() == homePageMI) {
+				makeHomePage();
 			}
 		} catch(Exception e) {
 			System.out.println("error: " + e);
