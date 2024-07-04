@@ -22,9 +22,11 @@ public class Main extends Application implements EventHandler<ActionEvent>{
 	private MenuItem searchTeams;
 	private MenuItem searchAllince;
 	private MenuItem searchAutos;
+	private MenuItem searchMatch;
 	private MenuItem compareTeams;
 	private MenuItem compareAllince;
 	private MenuItem compareAutos;
+	private MenuItem compareMatch;
 	private MenuItem findBestTeam;
 	private MenuItem findBestAllince;
 	private MenuItem findBestAuto;
@@ -36,6 +38,9 @@ public class Main extends Application implements EventHandler<ActionEvent>{
 	private MenuItem createAutoplan;
 	private MenuItem createMacthPlan;
 	//Data Menu Items
+	private MenuItem setPlayOffAlliances;
+	private MenuItem editPlayOffAlliances;
+	private MenuItem deletePlayOffAlliances;
 	private MenuItem openNewScDataMI;
 	private MenuItem openNewPitDataMI;
 	private MenuItem openNewDriveTeamDataMI;
@@ -79,6 +84,7 @@ public class Main extends Application implements EventHandler<ActionEvent>{
 		Menu compareMenu = new Menu("Compare:");
 		Menu findBestMenu = new Menu("Find The Best:");
 		Menu createMenu = new Menu("Create:");
+		Menu playOffMenu = new Menu("Playoff Alliances");
 		Menu openMenu = new Menu("Open Data");
 		Menu editMenu = new Menu("Edit Data");
 		Menu exportMenu = new Menu("Export Data");
@@ -93,6 +99,8 @@ public class Main extends Application implements EventHandler<ActionEvent>{
 		searchAllince.setOnAction(this);
 		searchAutos = new MenuItem("Autos");
 		searchAutos.setOnAction(this);
+		searchMatch = new MenuItem("Match");
+		searchMatch.setOnAction(this);
 		//compare stuff
 		compareTeams = new MenuItem("Teams");
 		compareTeams.setOnAction(this);
@@ -100,6 +108,7 @@ public class Main extends Application implements EventHandler<ActionEvent>{
 		compareAllince.setOnAction(this);
 		compareAutos = new MenuItem("Autos");
 		compareAutos.setOnAction(this);
+		compareMatch = new MenuItem("Match");
 		//find best stuff
 		findBestTeam = new MenuItem("Team");
 		findBestTeam.setOnAction(this);
@@ -120,6 +129,13 @@ public class Main extends Application implements EventHandler<ActionEvent>{
 		createAutoplan.setOnAction(this);
 		createMacthPlan = new MenuItem("Macth Plan");
 		createMacthPlan.setOnAction(this);
+		// Playoff Alliances
+		setPlayOffAlliances = new MenuItem("Set");
+		setPlayOffAlliances.setOnAction(this);
+		editPlayOffAlliances = new MenuItem("Edit");
+		editPlayOffAlliances.setOnAction(this);
+		deletePlayOffAlliances = new MenuItem("Delete");
+		deletePlayOffAlliances.setOnAction(this);
 		//open stuff
 		openNewScDataMI = new MenuItem("Scouting Data");
 		openNewScDataMI.setOnAction(this);
@@ -149,15 +165,16 @@ public class Main extends Application implements EventHandler<ActionEvent>{
 		exportDriveTeamComsMI.setOnAction(this);
 		//Adding Menu Items to their Menus
 		homePageMenu.getItems().addAll(homePageMI);
-		searchMenu.getItems().addAll(searchTeams, searchAutos, searchAllince);
-		compareMenu.getItems().addAll(compareTeams, compareAllince, compareAutos);
+		searchMenu.getItems().addAll(searchTeams, searchAutos, searchAllince, searchMatch);
+		compareMenu.getItems().addAll(compareTeams, compareAllince, compareAutos, compareMatch);
 		findBestMenu.getItems().addAll(findBestTeam, findBestAllince, findBestAuto, findBestStat, findBestRobotArchatype);
 		createMenu.getItems().addAll(createAllince, createMatch, createAutoplan, createMacthPlan);
+		playOffMenu.getItems().addAll(setPlayOffAlliances, editPlayOffAlliances, deletePlayOffAlliances);
 		openMenu.getItems().addAll(openNewScDataMI, openNewPitDataMI, openNewDriveTeamDataMI, openNewDriveTeamComsMI);
 		editMenu.getItems().addAll(editScDataMI, editPitDataMI, editDriveTeamDataMI, editDriveTeamComsMI);
 		exportMenu.getItems().addAll(exportScDataMI, exportPitDataMI, exportDriveTeamDataMI, exportDriveTeamComsMI);
 		//Adding Menu Items to the Menu Bar
-		mB.getMenus().addAll(homePageMenu, searchMenu, compareMenu, findBestMenu, createMenu, openMenu, editMenu, exportMenu);
+		mB.getMenus().addAll(homePageMenu, searchMenu, compareMenu, findBestMenu, createMenu, playOffMenu, openMenu, editMenu, exportMenu);
 		return mB;
 	}
 	
