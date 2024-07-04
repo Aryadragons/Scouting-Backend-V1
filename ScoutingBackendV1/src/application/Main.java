@@ -276,19 +276,27 @@ public class Main extends Application implements EventHandler<ActionEvent>{
 	}
 	
 	private void makeEditScData() {
-		
+		editScDataTab edScData = new editScDataTab();
+		Tab edScDataTab = new Tab("Edit Scouting Data", edScData);
+		mainTP.getTabs().addAll(edScDataTab);
 	}
 	
 	private void makeEditPitData() {
-		
+		editPitDataTab edPitData = new editPitDataTab();
+		Tab edPitDataTab = new Tab("Edit Pit Data", edPitData);
+		mainTP.getTabs().addAll(edPitDataTab);
 	}
 	
 	private void makeEditDriveTeamData() {
-		
+		editDriveTeamDataTab edDriveTeamData = new editDriveTeamDataTab();
+		Tab edDriveTeamDataTab = new Tab("Edit Drive Team Data", edDriveTeamData);
+		mainTP.getTabs().addAll(edDriveTeamDataTab);
 	}
 	
 	private void makeEditDriveTeamComs() {
-		
+		editDriveTeamComsTab edDriveTeamComs = new editDriveTeamComsTab();
+		Tab edDriveTeamComsTab = new Tab("Edit Drive Team Comments", edDriveTeamComs);
+		mainTP.getTabs().addAll(edDriveTeamComsTab);
 	}
 	
 	private void makeExportScData() {
@@ -369,16 +377,16 @@ public class Main extends Application implements EventHandler<ActionEvent>{
 				makeOpenNewDriveTeamComs();
 			}
 			if(event.getSource() == editScDataMI) {
-				makeCreateAutoPlan();
+				makeEditScData();
 			}
 			if(event.getSource() == editPitDataMI) {
-				makeCreateAutoPlan();
+				makeEditPitData();
 			}
 			if(event.getSource() == editDriveTeamDataMI) {
-				makeCreateAutoPlan();
+				makeEditDriveTeamData();
 			}
 			if(event.getSource() == editDriveTeamComsMI) {
-				makeCreateAutoPlan();
+				makeEditDriveTeamComs();
 			}
 			if(event.getSource() == exportScDataMI) {
 				makeCreateAutoPlan();

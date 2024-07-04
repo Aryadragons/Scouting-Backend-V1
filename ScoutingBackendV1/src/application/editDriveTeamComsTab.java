@@ -4,16 +4,15 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 
-public class editScDataTab extends GridPane {
-	
+public class editDriveTeamComsTab extends GridPane {
 	private Button doThisAddB;
 	private Button doThisEditB;
 	private Button doThisDelB;
 	
-	public editScDataTab() {
-		this.add(new Label("Manually Add New Scouting Data"), 0, 0);
-		this.add(new Label("Edit Scouting Data"), 0, 1);
-		this.add(new Label("Delete Part of Scouting Data"), 0, 2);
+	public editDriveTeamComsTab() {
+		this.add(new Label("Manually Add New Drive Team Comments"), 0, 0);
+		this.add(new Label("Edit Drive Team Comments"), 0, 1);
+		this.add(new Label("Delete Part of Drive Team Comments"), 0, 2);
 		doThisAddB = new Button("Do This!");
 		doThisEditB = new Button("Do This!");
 		doThisDelB = new Button("Do This!");
