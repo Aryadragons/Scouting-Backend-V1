@@ -251,52 +251,60 @@ public class Main extends Application implements EventHandler<ActionEvent>{
 		mainTP.getTabs().addAll(creMatchPlanTab);
 	}
 	
-	private void makeOpenNewScDataMI() {
+	private void makeOpenNewScData() {
+		openNewScDataTab openScData = new openNewScDataTab();
+		Tab openScDataTab = new Tab("Open New Scouting Data", openScData);
+		mainTP.getTabs().addAll(openScDataTab);
+	}
+	
+	private void makeOpenNewPitData() {
+		openNewPitDataTab openPitData = new openNewPitDataTab();
+		Tab openPitDataTab = new Tab("Open New Pit Data", openPitData);
+		mainTP.getTabs().addAll(openPitDataTab);
+	}
+	
+	private void makeOpenNewDriveTeamData() {
+		openNewDriveTeamDataTab openDriveTeamData = new openNewDriveTeamDataTab();
+		Tab openDriveTeamDataTab = new Tab("Open New DriveTeam Data", openDriveTeamData);
+		mainTP.getTabs().addAll(openDriveTeamDataTab);
+	}
+	
+	private void makeOpenNewDriveTeamComs() {
+		openNewDriveTeamComsTab openDriveTeamComs = new openNewDriveTeamComsTab();
+		Tab openDriveTeamComsTab = new Tab("Open New DriveTeam Comments", openDriveTeamComs);
+		mainTP.getTabs().addAll(openDriveTeamComsTab);
+	}
+	
+	private void makeEditScData() {
 		
 	}
 	
-	private void makeOpenNewPitDataMI() {
+	private void makeEditPitData() {
 		
 	}
 	
-	private void makeOpenNewDriveTeamDataMI() {
+	private void makeEditDriveTeamData() {
 		
 	}
 	
-	private void makeOpenNewDriveTeamComsMI() {
+	private void makeEditDriveTeamComs() {
 		
 	}
 	
-	private void makeEditScDataMI() {
+	private void makeExportScData() {
 		
 	}
 	
-	private void makeEditPitDataMI() {
+	private void makeExportPitData() {
 		
 	}
 	
-	private void makeEditDriveTeamDataMI() {
-		
-	}
-	
-	private void makeEditDriveTeamComsMI() {
-		
-	}
-	
-	private void makeExportScDataMI() {
-		
-	}
-	
-	private void makeExportPitDataMI() {
-		
-	}
-	
-	private void makeExportDriveTeamDataMI() {
+	private void makeExportDriveTeamData() {
 		
 	}
 	
 	
-	private void makeExportDriveTeamComsMI() {
+	private void makeExportDriveTeamComs() {
 		
 	}
 	
@@ -345,17 +353,20 @@ public class Main extends Application implements EventHandler<ActionEvent>{
 			if(event.getSource() == createAutoplan) {
 				makeCreateAutoPlan();
 			}
+			if(event.getSource() == createMacthPlan) {
+				makeCreateMatchPlan();
+			}
 			if(event.getSource() == openNewScDataMI) {
-				makeCreateAutoPlan();
+				makeOpenNewScData();
 			}
 			if(event.getSource() == openNewPitDataMI) {
-				makeCreateAutoPlan();
+				makeOpenNewPitData();
 			}
 			if(event.getSource() == openNewDriveTeamDataMI) {
-				makeCreateAutoPlan();
+				makeOpenNewDriveTeamData();
 			}
 			if(event.getSource() == openNewDriveTeamComsMI) {
-				makeCreateAutoPlan();
+				makeOpenNewDriveTeamComs();
 			}
 			if(event.getSource() == editScDataMI) {
 				makeCreateAutoPlan();
