@@ -300,20 +300,28 @@ public class Main extends Application implements EventHandler<ActionEvent>{
 	}
 	
 	private void makeExportScData() {
-		
+		exportScDataTab exScData = new exportScDataTab();
+		Tab exScDataTab = new Tab("Export Scouting Data", exScData);
+		mainTP.getTabs().addAll(exScDataTab);
 	}
 	
 	private void makeExportPitData() {
-		
+		exportPitDataTab exPitData = new exportPitDataTab();
+		Tab exPitDataTab = new Tab("Export Pit Data", exPitData);
+		mainTP.getTabs().addAll(exPitDataTab);
 	}
 	
 	private void makeExportDriveTeamData() {
-		
+		exportDriveTeamDataTab exDriveTeamData = new exportDriveTeamDataTab();
+		Tab exDriveTeamDataTab = new Tab("Export Drive Team Data", exDriveTeamData);
+		mainTP.getTabs().addAll(exDriveTeamDataTab);
 	}
 	
 	
 	private void makeExportDriveTeamComs() {
-		
+		exportDriveTeamComsTab exDriveTeamComs = new exportDriveTeamComsTab();
+		Tab exDriveTeamComsTab = new Tab("Export Drive Team Comments", exDriveTeamComs);
+		mainTP.getTabs().addAll(exDriveTeamComsTab);
 	}
 	
 	@Override
@@ -389,16 +397,16 @@ public class Main extends Application implements EventHandler<ActionEvent>{
 				makeEditDriveTeamComs();
 			}
 			if(event.getSource() == exportScDataMI) {
-				makeCreateAutoPlan();
+				makeExportScData();
 			}
 			if(event.getSource() == exportPitDataMI) {
-				makeCreateAutoPlan();
+				makeExportPitData();
 			}
 			if(event.getSource() == exportDriveTeamDataMI) {
-				makeCreateAutoPlan();
+				makeExportDriveTeamData();
 			}
 			if(event.getSource() == exportDriveTeamComsMI) {
-				makeCreateAutoPlan();
+				makeExportDriveTeamComs();
 			}
 		} catch(Exception e) {
 			System.out.println("error: " + e);
