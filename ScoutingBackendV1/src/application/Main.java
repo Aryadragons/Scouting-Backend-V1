@@ -292,6 +292,18 @@ public class Main extends Application implements EventHandler<ActionEvent>{
 		mainTP.getTabs().addAll(openDriveTeamComsTab);
 	}
 	
+	
+	private void makeSetPlayOffAlliance() {
+		setPlayOffAlliancesTab setPlayOff = new setPlayOffAlliancesTab();
+		Tab setPlayOffTab = new Tab("Set Play Off Alliances", setPlayOff);
+		mainTP.getTabs().addAll(setPlayOffTab);
+	}
+	private void makeEditPlayOffAlliance() {
+		editPlayOffAlliancesTab editPlayOff = new editPlayOffAlliancesTab();
+		Tab editPlayOffTab = new Tab("Edit Play Off Alliances", editPlayOff);
+		mainTP.getTabs().addAll(editPlayOffTab);
+	}
+	
 	private void makeEditScData() {
 		editScDataTab edScData = new editScDataTab();
 		Tab edScDataTab = new Tab("Edit Scouting Data", edScData);
@@ -394,6 +406,12 @@ public class Main extends Application implements EventHandler<ActionEvent>{
 			}
 			if(event.getSource() == createMacthPlan) {
 				makeCreateMatchPlan();
+			}
+			if(event.getSource() == setPlayOffAlliances) {
+				makeSetPlayOffAlliance();
+			}
+			if(event.getSource() == editPlayOffAlliances) {
+				makeEditPlayOffAlliance();
 			}
 			if(event.getSource() == openNewScDataMI) {
 				makeOpenNewScData();
